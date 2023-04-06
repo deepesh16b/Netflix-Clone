@@ -1,0 +1,27 @@
+.nav{
+    height: 100px;
+    width: 100vw;
+    /* background-color: rgb(47, 47, 47); */
+}
+
+.nav__content{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav__logo{
+    width: 120px;
+    position: fixed;
+    top: 20px;
+    left: 50px;
+    cursor: pointer;
+}
+
+.nav__avatar{
+    width: 50px;
+    position: fixed;
+    top: 20px;
+    right: 50px;
+    cursor: pointer;
+}
