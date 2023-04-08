@@ -1,13 +1,12 @@
 // BASE_URL = "https://api.themoviedb.org/3/movie/27205"
-import logo from './logo.svg';
-import './App.css';
-import Nav from './Nav';
-import Banner from './Banner';
-function App() {
+
+import "./App.css";
+import Homescreen from "./Homescreen";
+
+function App({}) {
   return (
-    <div className="App">
-      <Nav/>
-      <Banner/>
+    <div className="app">
+      <Homescreen />
     </div>
   );
 }
