@@ -1,3 +1,13 @@
+# Netflix Clone
+
+#### Note: in order to use you must get your API key at themoviedb website
+
+##### Should look like this:
+
+![68747470733a2f2f692e696d6775722e636f6d2f7249636f4b48472e706e67](https://user-images.githubusercontent.com/70226498/230476954-49f4e734-efc5-4a48-913c-36b9ccdc8e69.png)
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
