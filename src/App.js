@@ -3,7 +3,7 @@
 import "./App.css";
 import Homescreen from "./Homescreen";
 
-function App({}) {
+function App() {
   return (
     <div className="app">
       <Homescreen />

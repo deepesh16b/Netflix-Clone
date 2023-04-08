@@ -6,7 +6,7 @@ import requests from "./requests";
 // const REACT_APP_KEY = process.env.KEY;
 
 const Banner = () => {
-  const bannerPath = `banner2.png`;
+//   const bannerPath = `banner2.png`;
 
   const [movie, setMovie] = useState([]);
 
