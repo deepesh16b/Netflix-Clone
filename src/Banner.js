@@ -14,15 +14,13 @@ const Banner = () => {
     async function fetchData() {
       const request1 = await axios.get(requests.fetchNetflixOriginals1);
       const request2 = await axios.get(requests.fetchNetflixOriginals2);
-      const request = request1.data.results.concat(request2.data.results);
-      const bannerMovieList = [
-        0, 2, 4, 13, 14, 16, 23, 25, 26, 27, 28, 34, 36, 38,
-      ];
+      const request3 = await axios.get(requests.fetchNetflixOriginals3);
+      const request = request1.data.results.concat(request2.data.results.concat(request3.data.results));
+      
       setMovie(
         request[
-          bannerMovieList[
-            Math.floor(Math.random() * bannerMovieList.length - 1)
-          ]
+            Math.floor(Math.random() * request.length - 1)
+          
         ]
       );
       return request;

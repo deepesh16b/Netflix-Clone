@@ -1,10 +1,10 @@
 import React from "react";
-import "./Homescreen.css";
-import Nav from "./Nav";
-import Banner from "./Banner";
-import requests from "./requests";
-import Row from "./Row.js";
-const Homescreen = () => {
+// import "./Homescreen.css";
+import Nav from "../Nav";
+import Banner from "../Banner";
+import requests from "../requests";
+import Row from "../Row.js";
+const HomeScreen = () => {
   return (
     <div>
       <Nav />
@@ -25,4 +25,4 @@ const Homescreen = () => {
   );
 };
 
-export default Homescreen;
+export default HomeScreen;

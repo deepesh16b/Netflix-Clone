@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Nav.css";
-
+import {useNavigate} from 'react-router-dom';
 const Nav = () => {
-  
   const [show, handleShow] = useState(false);
 
   const transitionNavBar = () => {
@@ -13,15 +12,27 @@ const Nav = () => {
     }
   };
 
+  const navigate = useNavigate();
+
   useEffect(() => {
     window.addEventListener("scroll", transitionNavBar);
   }, []);
-  
+
   return (
-    <div className={`nav ${show && "nav__black" }`}>
+    <div className={`nav ${show && "nav__black"}`}>
       <div className="nav__content">
-        <img className="nav__logo" src="logo.png" alt="" />
-        <img className="nav__avatar" src="avatar.png" alt="" />
+        <img
+          onClick={() => navigate("/")}
+          className="nav__logo"
+          src="logo.png"
+          alt=""
+        />
+        <img
+          onClick={() => navigate("/profile")}
+          className="nav__avatar"
+          src="avatar.png"
+          alt=""
+        />
       </div>
     </div>
   );
