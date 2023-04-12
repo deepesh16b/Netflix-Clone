@@ -4,7 +4,7 @@ import React from 'react'
 
 const PlansScreen = () => {
   return (
-    <div>PlansScreen</div>
+    <div> </div>
   )
 }
 

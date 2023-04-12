@@ -13,11 +13,11 @@ const ProfileScreen = () => {
       <div className="profileScreen__body">
         <h1>Edit Profile</h1>
         <div className="profileScreen__info">
-          <img src="avatar.png" alt="" />
+          <img className="avatar" src="avatar.png" alt="" />
           <div className="profileScreen__details">
             <h2>{user.email}</h2>
             <div className="profileScreen__plans">
-              <h3>Plans</h3>
+              <h3>{user.name}</h3>
               <PlansScreen />
 
               <button onClick={()=>auth.signOut()}  className='profileScreen__signOut'>Sign Out</button>

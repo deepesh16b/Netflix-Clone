@@ -37,3 +37,46 @@
     right: 70px;
     cursor: pointer;
 }
+
+@media screen and (max-width: 800px){
+    .nav{
+        position: fixed;
+        top: 0;
+        height: 30px;
+        width: 100%;
+        z-index: 1;
+        padding: 20px;
+        transition-timing-function: ease-in;
+        transition: all 0.3s;
+    }
+    
+    .nav__black{
+        background-color: rgba(16, 16, 16, 0.878);
+    
+    }
+    
+    .nav__content{
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .nav__logo{
+        width: 43px;
+        position: fixed;
+        top: 12.5px;
+        object-fit: contain;
+        padding-left: 20px;
+        left: 0;
+        cursor: pointer;
+    }
+    
+    .nav__avatar{
+        width: 39px;
+        position: fixed;
+        top: 16px;
+        right: 20px;
+        cursor: pointer;
+    }
+    
+}

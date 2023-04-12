@@ -24,7 +24,7 @@ const Nav = () => {
         <img
           onClick={() => navigate("/")}
           className="nav__logo"
-          src="logo.png"
+          src={(window.screen.width > 800) ? ("logo.png") : ("favicon.png")}
           alt=""
         />
         <img

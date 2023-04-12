@@ -1,7 +1,7 @@
 .loginScreen {
   position: relative;
   height: 100%;
-  background: url("D:\.REACT Projects Work\netflix-clone-beta\public\loginscreen-bg.jpg")
+  background: url("../../public/loginscreen-bg.jpg")
     center no-repeat;
   background-size: cover;
 }
@@ -92,3 +92,108 @@
     top: 0.92px; 
 }
 
+
+
+@media screen and (max-width : 800px) {
+  .loginScreen {
+    position: relative;
+    height: 100%;
+    background: url("../../public/loginscreen-bg.jpg")
+      center no-repeat;
+    background-size: cover;
+  }
+  
+  .loginScreen__body > h1 {
+    font-size: 1.95rem;
+    margin-bottom: 20px;
+    font-weight: 800;
+  }
+  .loginScreen__body > h2 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+  .loginScreen__body > h3 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 10px;
+  }
+  .loginScreen__body {
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    top: 25%;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 1;
+    padding: 20px;
+    left: 0;
+    right: 0;
+  }
+  
+  .loginScreen__gradient {
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.5);
+    background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.8) 0,
+      rgba(0, 0, 0, 0) 60%,
+      rgba(0, 0, 0, 0.8) 100%
+    );
+  }
+  
+  .loginScreen__button{
+      position: fixed;
+      right: 20px;
+      top: 24px;
+      padding: 9px 15px;
+      font-size: 0.95rem;
+      color: #fff;
+      background-color: #e50914;
+      font-weight: 600;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+  }
+  .loginScreen__logo {
+    width: 114px;
+    position: fixed;
+    top: 17px;
+    object-fit: contain; /* to maintain the aspect ratio of logo */
+    padding-left: 20px;
+    left: 0;
+  }
+  .loginScreen__input {
+      margin: 20px;
+      justify-content: center;
+  }
+  .loginScreen__input > form > input{
+      padding: 11.8px;
+      outline-width: 0;
+      height: 30px;
+      width: 83%;
+      max-width: 600px;
+      border: none;
+      font-size: 1rem;
+      border-radius: 4px;
+      margin-bottom: 20px;
+      background-color: #ffffffc1;
+  }
+  .loginScreen__getStarted{
+      padding: 15px 20px 15px 20px;
+      color: #fff;
+      background-color: #e50914;
+      border: none;
+      font-weight: 500;
+      font-size: 1.1rem;
+      cursor: pointer;
+      margin-top: 1px;   
+      position: relative;
+      top: 0.92px; 
+      border-radius: 4px;
+  }
+  
+  
+}

@@ -1,11 +1,13 @@
 import "./SignUpScreen.css";
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { auth } from "../firebase";
 
-const SignUpScreen = () => {
+const SignUpScreen = ({ Email }) => {
   const emailRef = useRef(null);
   const passwordRef = useRef(null);
-
+  const [enteredEmail, setEnteredEmail] = useState(Email);
+ 
+  
   const register = (e) => {
     e.preventDefault();
     auth
@@ -17,7 +19,10 @@ const SignUpScreen = () => {
         console.log(authUser);
       })
       .catch((error) => {
-        alert(error.message);
+        if(error.message === "Firebase: The email address is badly formatted. (auth/invalid-email).")
+          alert("Please enter correct Email and Password!");
+        else  
+          alert(error.message);
       });
   };
   const signIn = (e) => {
@@ -31,7 +36,12 @@ const SignUpScreen = () => {
         // alert("Signed In");
       })
       .catch((error) => {
-        alert(error.message);
+        if(error.message === "Firebase: There is no user record corresponding to this identifier. The user may have been deleted. (auth/user-not-found).")
+          alert("Looks like you are new to Netflix, click on 'Sign-Up Now'");
+        else
+          alert(error.message);
+        // "'"
+        
       });
   };
 
@@ -39,7 +49,13 @@ const SignUpScreen = () => {
     <div className="signupScreen">
       <form>
         <h1>Sign In</h1>
-        <input ref={emailRef} type="email" placeholder="Email" />
+        <input
+          ref={emailRef}
+          value={enteredEmail}
+          onChange={(e) => setEnteredEmail(e.target.value)}
+          type="email"
+          placeholder="Email"
+        />
         <input ref={passwordRef} type="password" placeholder="Password" />
         <button type="submit" onClick={signIn}>
           Sign In
