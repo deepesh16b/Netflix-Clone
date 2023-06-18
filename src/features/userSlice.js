@@ -4,14 +4,16 @@ export const userSlice = createSlice({
   name: "user",
   initialState: {
     user: null,
+    isLoading: true, // Add isLoading state
   },
   reducers: {
-    // Login & logout actions can make changes to user Store Slice 
     login: (state, action) => {
       state.user = action.payload;
+      state.isLoading = false; // Update isLoading to false after login
     },
     logout: (state) => {
       state.user = null;
+      state.isLoading = false; // Update isLoading to false after logout
     },
   },
 });

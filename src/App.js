@@ -9,8 +9,10 @@ import { useDispatch, useSelector } from "react-redux";
 import { login, logout, selectUser } from "./features/userSlice";
 import ProfileScreen from "./screens/ProfileScreen";
 import TrailerPage from './screens/TrailerPage';
+
 function App() {
   const user = useSelector(selectUser);
+  const isLoading = useSelector((state) => state.user.isLoading); // Add isLoading selector
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -31,6 +33,12 @@ function App() {
 
     return unsubscribe;
   }, [dispatch]);
+
+
+  if (isLoading) {
+    // Show a loading screen while user state is being determined
+    return <div className="loadingScreen"><img className="loadingImage" src="/loading1.gif" alt="loading"/></div>;
+  }
 
   return (
     <div className="app">

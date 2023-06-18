@@ -1,3 +1,15 @@
 .app{
     background-color: #111;
 }
+.loadingScreen{
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+}
+.loadingScreen > .loadingImage{
+    width: 60%;
+}
