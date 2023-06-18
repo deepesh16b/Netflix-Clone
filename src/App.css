@@ -11,5 +11,10 @@
     background-color: #000000;
 }
 .loadingScreen > .loadingImage{
-    width: 60%;
+    width: 50%;
+}
+@media screen and (max-width: 800px){
+    .loadingScreen > .loadingImage{
+        width: 95%;
+    }
 }

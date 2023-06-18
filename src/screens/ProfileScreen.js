@@ -9,7 +9,7 @@ const ProfileScreen = () => {
   const user = useSelector(selectUser);
   return (
     <div className="profileScreen">
-      <Nav />
+      <Nav profileOpened={true} />
       <div className="profileScreen__body">
         <h1>Edit Profile</h1>
         <div className="profileScreen__info">
