@@ -24,13 +24,13 @@ const Nav = () => {
         <img
           onClick={() => navigate("/")}
           className="nav__logo"
-          src={(window.screen.width > 800) ? ("logo.png") : ("favicon.png")}
+          src={(window.screen.width > 800) ? ("/logo.png") : ("/favicon.png")}
           alt=""
         />
         <img
           onClick={() => navigate("/profile")}
           className="nav__avatar"
-          src="avatar.png"
+          src="/avatar.png"
           alt=""
         />
       </div>

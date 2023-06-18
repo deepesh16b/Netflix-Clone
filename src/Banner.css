@@ -10,6 +10,13 @@
   padding-top: 120px;
   height: 172px;
 }
+.banner__trailer {
+  position:relative;
+  bottom: 50px;
+  /* left: 50%; */
+  /* transform: translateX(-50%); */
+  z-index: 1;
+}
 
 .banner__title {
   font-size: 3.5rem;
@@ -97,7 +104,7 @@
     color: #fff;
     margin-bottom: 80px;
   }
-  
+
   .banner__content {
     position: relative;
     margin-left: 20px;

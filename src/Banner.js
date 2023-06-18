@@ -1,14 +1,11 @@
 import React, { useState, useEffect } from "react";
 import "./Banner.css";
 import axios from "./axios";
+import { useNavigate } from "react-router-dom";
 import requests from "./requests";
-
-// const REACT_APP_KEY = process.env.KEY;
-
 const Banner = () => {
-  //   const bannerPath = `banner2.png`;
-
   const [movie, setMovie] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     async function fetchData() {
@@ -20,15 +17,22 @@ const Banner = () => {
       );
 
       setMovie(request[Math.floor(Math.random() * request.length - 1)]);
-      return request;
     }
     fetchData();
   }, []);
 
+  const handleClick = async () => {
+    const term = movie.title || movie.name;
+    const url = `/trailer/${term.toLowerCase().replace(/\s/g, "%")}`;
+    navigate(url);
+  };
+
   const truncate = (string, n) =>
     string?.length > n ? string.substring(0, n) + "..." : string;
+
   const bannerTypeWithPath =
     window.screen.width > 800 ? movie?.backdrop_path : movie?.poster_path;
+
   return (
     <div
       className="banner"
@@ -49,17 +53,17 @@ const Banner = () => {
         )}
 
         <div className="banner__buttons">
-          <button className="banner__button play">
-            <i class="fa-solid fa-play"> </i> Play
+          <button className="banner__button play" onClick={handleClick}>
+            <i className="fa-solid fa-play"> </i> Play
           </button>
           {window.screen.width > 800 ? (
             <button className="banner__button list">
-              <i class="fa-solid fa-plus"> </i> My List
+              <i className="fa-solid fa-plus"> </i> My List
             </button>
           ) : (
-            <i class="fa-solid fa-plus"> </i>
+            <i className="fa-solid fa-plus"> </i>
           )}
-          <i class="fa fa-circle-info"></i>
+          <i className="fa fa-circle-info"></i>
         </div>
         {window.screen.width > 800 ? (
           <h1 className="banner__description">
