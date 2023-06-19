@@ -4,7 +4,7 @@
 
 ##### Should look like this:
 
-![68747470733a2f2f692e696d6775722e636f6d2f7249636f4b48472e706e67](https://user-images.githubusercontent.com/70226498/230476954-49f4e734-efc5-4a48-913c-36b9ccdc8e69.png)
+![Screenshot_20230619_134428](https://github.com/deepesh16b/Netflix-Clone/assets/70226498/259f44d5-c924-4fdb-babb-2b8143dfe5ec)
 
 
 
